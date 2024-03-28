@@ -5,4 +5,7 @@ import retrofit2.Response
 
 interface NewsRemoteDataSource {
     suspend fun getDataNews() : Response<NewsResponse>
+    suspend fun getDataNewsId() : Response<NewsResponse>
+    suspend fun getDataNewsDe() : Response<NewsResponse>
+    suspend fun getDataNewsUs() : Response<NewsResponse>
 }

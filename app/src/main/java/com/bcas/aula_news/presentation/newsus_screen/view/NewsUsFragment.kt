@@ -1,4 +1,4 @@
-package com.bcas.aula_news.presentation.home_screen.view
+package com.bcas.aula_news.presentation.newsus_screen.view
 
 import android.view.LayoutInflater
 import android.view.ViewGroup

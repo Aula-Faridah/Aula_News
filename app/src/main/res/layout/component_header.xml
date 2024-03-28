@@ -45,7 +45,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="casual"
-            android:text="Hot News From Different Countries Here!!"
+            android:text="Hot News From Various Countries is Here!!"
             android:textAlignment="center"
             android:textColor="@color/white"
             android:textStyle="bold" />

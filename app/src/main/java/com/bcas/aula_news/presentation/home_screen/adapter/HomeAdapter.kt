@@ -1,9 +1,9 @@
-package com.bcas.aula_news.presentation.detail_screen.adapter
+package com.bcas.aula_news.presentation.home_screen.adapter
 
 import androidx.fragment.app.Fragment
 import androidx.viewpager2.adapter.FragmentStateAdapter
 
-class HomeTabAdapter(
+class HomeAdapter(
     fragment: Fragment,
 ) : FragmentStateAdapter(
     fragment.childFragmentManager,

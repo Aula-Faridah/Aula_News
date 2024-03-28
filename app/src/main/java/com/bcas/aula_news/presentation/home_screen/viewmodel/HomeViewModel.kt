@@ -11,28 +11,25 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
-@HiltViewModel
-class HomeViewModel @Inject constructor(
-    private val homeRemoteDataSource: NewsRemoteDataSource
-) : ViewModel() {
+class HomeViewModel : ViewModel() {
 
-    private val _homeNews = MutableLiveData<NewsResponse>()
-
-    val homeNews: LiveData<NewsResponse>
-        get() = _homeNews
-
-    private val _homeNewsError = MutableLiveData<String>()
-
-    val homeNewsError: LiveData<String>
-        get() = _homeNewsError
-
-    fun getHomeNews() = viewModelScope.launch(Dispatchers.IO){
-        homeRemoteDataSource.getDataNews().let {
-            if (it.isSuccessful){
-                _homeNews.postValue(it.body())
-            } else {
-                _homeNewsError.postValue(it.message())
-            }
-        }
-    }
+//    private val _homeNews = MutableLiveData<NewsResponse>()
+//
+//    val homeNews: LiveData<NewsResponse>
+//        get() = _homeNews
+//
+//    private val _homeNewsError = MutableLiveData<String>()
+//
+//    val homeNewsError: LiveData<String>
+//        get() = _homeNewsError
+//
+//    fun getHomeNews() = viewModelScope.launch(Dispatchers.IO){
+//        homeRemoteDataSource.getDataNews().let {
+//            if (it.isSuccessful){
+//                _homeNews.postValue(it.body())
+//            } else {
+//                _homeNewsError.postValue(it.message())
+//            }
+//        }
+//    }
 }

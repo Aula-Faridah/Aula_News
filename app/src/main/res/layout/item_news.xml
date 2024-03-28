@@ -2,31 +2,49 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
     android:gravity="center"
     android:orientation="vertical">
 
     <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
         android:padding="12dp"
         android:background="@drawable/background_rounded_menu"
-        android:orientation="vertical"
+        android:orientation="horizontal"
         android:layout_margin="12dp">
 
-        <ImageView
+        <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/ivNews"
-            android:layout_width="100dp"
-            android:layout_height="60dp"
-            android:background="@drawable/background_rounded_item_menu"/>
-        <TextView
-            android:id="@+id/tvTitleNews"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:textAlignment="center"
+            android:layout_width="200dp"
+            android:layout_height="160dp"
+            android:background="@drawable/background_rounded_item_menu"
             android:layout_gravity="center"
-            android:text="News' Title"
-            android:textStyle="bold"/>
+            tools:src="@drawable/bca_syariah"
+            android:padding="8dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvTitleNews"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="News'Title"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvClick"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Click Here"
+                android:textStyle="italic"
+                android:layout_marginTop="8dp"/>
+        </LinearLayout>
 
 
 
