@@ -31,20 +31,20 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(){
         val viewPager = binding.vpHome
         adapterHome = HomeAdapter(this)
         adapterHome?.addListFrament(NewsIdFragment())
-        adapterHome?.addListFrament(NewsUsFragment())
         adapterHome?.addListFrament(NewsDeFragment())
+        adapterHome?.addListFrament(NewsUsFragment())
         viewPager.adapter = adapterHome
 
         TabLayoutMediator(tabLayout, viewPager) {tab,position ->
             when(position){
                 0 -> {
-                    tab.text = "ID"
+                    tab.text = "INDIA"
                 }
                 1 -> {
-                    tab.text = "US"
+                    tab.text = "KOREA"
                 }
                 2 -> {
-                    tab.text = "DE"
+                    tab.text = "UNITED STATES"
                 }
             }
         }.attach()
