@@ -21,6 +21,10 @@
         <activity
             android:name=".presentation.newsid_screen.view.NewsIdActivity"
             android:exported="false" />
+        <activity android:name=".presentation.newsde_screen.view.NewsDeActivity"
+            android:exported="false"/>
+        <activity android:name=".presentation.newsus_screen.view.NewsUsActivity"
+            android:exported="false"/>
         <activity
             android:name=".presentation.home_screen.view.HomeActivity"
             android:exported="true">
