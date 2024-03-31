@@ -17,18 +17,18 @@
 
         <androidx.appcompat.widget.AppCompatImageView
 
-            android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
             android:padding="4dp"
-            android:src="@drawable/fluent__news_28_filled" />
+            android:src="@drawable/logocolor" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="AULA NEWS"
+            android:text="Stay Informed, Stay Ahead"
             android:textColor="@color/white"
             android:layout_gravity="center"
-            android:fontFamily="sans-serif-black"
+            android:fontFamily="sans-serif-condensed"
             android:padding="4dp"/>
     </LinearLayout>
 
