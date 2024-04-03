@@ -9,24 +9,29 @@
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/logocolor"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@drawable/logocolor"
         android:supportsRtl="true"
         android:theme="@style/Theme.Aula_News"
         tools:targetApi="31">
+        <activity
+            android:name=".presentation.home_screen.view.HomeActivity"
+            android:exported="false" />
         <activity
             android:name=".MainActivity"
             android:exported="false" />
         <activity
             android:name=".presentation.newsid_screen.view.NewsIdActivity"
             android:exported="false" />
-        <activity android:name=".presentation.newsde_screen.view.NewsDeActivity"
-            android:exported="false"/>
-        <activity android:name=".presentation.newsus_screen.view.NewsUsActivity"
-            android:exported="false"/>
         <activity
-            android:name=".presentation.home_screen.view.HomeActivity"
+            android:name=".presentation.newsde_screen.view.NewsDeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".presentation.newsus_screen.view.NewsUsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".presentation.splash_screen.SplashScreen"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
