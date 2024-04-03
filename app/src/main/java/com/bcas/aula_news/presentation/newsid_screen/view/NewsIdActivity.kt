@@ -1,12 +1,16 @@
 package com.bcas.aula_news.presentation.newsid_screen.view
 
 import android.annotation.SuppressLint
+import android.graphics.Bitmap
 import android.os.Build
 import android.os.Bundle
 import android.os.PersistableBundle
+import android.view.View
+import android.webkit.WebView
 import android.webkit.WebViewClient
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.VIEW_MODEL_STORE_OWNER_KEY
 import com.bcas.aula_news.databinding.ActivityNewsIdBinding
 
 class NewsIdActivity : AppCompatActivity() {
@@ -24,9 +28,9 @@ class NewsIdActivity : AppCompatActivity() {
         binding.ivBackButton.setOnClickListener {
             if (binding.wvWebView.canGoBack()) {
                 binding.wvWebView.goBack()
-            } else  (
+            } else {
                 finish()
-            )
+            }
         }
 
     }
@@ -34,7 +38,17 @@ class NewsIdActivity : AppCompatActivity() {
     @SuppressLint("SetJavaScriptEnabled")
     @RequiresApi(Build.VERSION_CODES.O)
     private fun webViewSetup(url : String?) {
-        binding.wvWebView.webViewClient = WebViewClient()
+
+        binding.wvWebView.webViewClient = object : WebViewClient() {
+            override fun onPageStarted(view: WebView?, url: String?, favicon: Bitmap?) {
+                super.onPageStarted(view, url, favicon)
+                binding.loadingProgressBar.visibility = View.VISIBLE
+            }
+            override fun onPageFinished(view: WebView?, url: String?) {
+                super.onPageFinished(view, url)
+                binding.loadingProgressBar.visibility = View.GONE // Hiding Progress Bar
+            }
+        }
         binding.wvWebView.apply {
             settings.javaScriptEnabled = true
             settings.safeBrowsingEnabled = true
